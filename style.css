@@ -3,12 +3,13 @@ body {
   font-family: "Source Code Pro", monospace;
 }
 .container {
-  background: #e4f1fe;
+  background: rgba(228, 241, 254, 1);
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 10px 11px 26px rgba(85, 133, 181, 0.2);
+  border: 1px solid #66bfbf;
 }
 .search-input {
   width: 100%;
@@ -26,7 +27,49 @@ body {
 .featured-elements-container {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
 }
-.featured-city-elements {
-  justify-content: flex-end;
+p,
+footer,
+.featured-city,
+.feature-temperature,
+.feature-temperature-symbol-c,
+.feature-temperature-symbol-f {
+  color: #113f67;
+}
+.featured-city {
+  font-size: 48px;
+  line-height: 20px;
+  margin: none;
+}
+p strong {
+  color: #ff5722;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+}
+.featured-summary {
+  display: flex;
+  align-items: center;
+}
+
+.feature-emoji {
+  font-size: 24px;
+}
+.feature-temperature {
+  font-size: 80px;
+}
+
+.feature-temperature-symbol-c,
+.feature-temperature-symbol-f {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+footer {
+  margin-top: 30px;
+  font-size: 11px;
+  text-align: center;
+}
+a {
+  color: #ff5722;
 }
