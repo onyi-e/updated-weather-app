@@ -1,0 +1,32 @@
+body {
+  background: #f7f7f7;
+  font-family: "Source Code Pro", monospace;
+}
+.container {
+  background: #e4f1fe;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 10px 11px 26px rgba(85, 133, 181, 0.2);
+}
+.search-input {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  background: #f7f7f7;
+}
+.search-input:focus {
+  outline: 2px solid #5585b5;
+  font-family: "Source Code Pro", monospace;
+}
+.featured-elements-container {
+  display: flex;
+  justify-content: space-between;
+}
+.featured-city-elements {
+  justify-content: flex-end;
+}
