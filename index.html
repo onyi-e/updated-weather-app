@@ -30,20 +30,26 @@
         <div class="featured-elements-container">
           <div>
             <h1 class="featured-city" id="user-city">Lagos</h1>
+            <h5 class="country" id="country"></h5>
 
             <p>
-              Monday 13:30, Gentle Breeze <br />
-              Humidity:<strong>20% </strong>Wind:<strong>5.76km/h</strong>
+              <span id="current-date"></span>
+              <span id="description" class="description"></span>
+              <br />
+              Humidity:<strong id="humidity"> </strong>Wind:<strong
+                id="wind-speed"
+              ></strong>
             </p>
           </div>
           <div class="featured-summary">
-            <div class="feature-emoji">⛅</div>
-            <div class="feature-temperature" id="temp">21</div>
+            <div class="feature-emoji" id="icon"></div>
+            <div class="feature-temperature" id="temp"></div>
             <div class="feature-temperature-symbol-c" id="celcius">℃</div>
             <div class="feature-temperature-symbol-f" id="fahrenheit"></div>
           </div>
         </div>
       </main>
+
       <footer>
         This project was built by
         <a href="https://www.linkedin.com/in/onyinyeanyanwu/" target="_blank"
