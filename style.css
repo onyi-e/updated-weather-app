@@ -3,7 +3,7 @@ body {
   font-family: "Source Code Pro", monospace;
 }
 .container {
-  background: rgba(228, 241, 254, 9);
+  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
@@ -45,7 +45,7 @@ footer,
 }
 
 p strong {
-  color: #ff5722;
+  color: #f73859;
   font-weight: 500;
   font-size: 16px;
   line-height: 30px;
@@ -87,5 +87,5 @@ footer {
   text-align: center;
 }
 a {
-  color: #ff5722;
+  color: #f73859;
 }
