@@ -73,18 +73,39 @@ p strong {
   font-size: 60px;
 }
 
-.feature-temperature-symbol-c,
-.feature-temperature-symbol-f {
+.feature-temperature-symbol-c {
   font-size: 20px;
   margin-bottom: 30px;
-  text-decoration: underline;
-  text-decoration-color: #ff5722;
-  text-decoration-thickness: 1px;
-  transition: all 200ms ease-in-out;
 }
-.feature-temperature-symbol-c:hover {
-  cursor: pointer;
-  color: #ff5722;
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.forecast-day {
+  border: 1px solid #e3f0fd;
+  padding: 35px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2cap rgba(118, 163, 207, 0.2);
+}
+.weather-forecast-day {
+  color: #113f67;
+  margin-bottom: 20px;
+}
+.forecast-icon {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+.forecast-temp strong {
+  color: #f73859;
+}
+.forecast-temp {
+  margin-top: 10px;
+  color: #113f67;
+}
+.lowest-temp-forecast {
+  opacity: 0.7;
 }
 footer {
   margin-top: 30px;
