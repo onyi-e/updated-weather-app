@@ -1,9 +1,10 @@
 body {
-  background: #f7f7f7;
+  background: #b8dcff;
   font-family: "Source Code Pro", monospace;
 }
+
 .container {
-  background: linear-gradient(-225deg, #5d9fff 0%, #b8dcff 48%, #6bbbff 100%);
+  background: #f7f7f7;
   max-width: 700px;
   margin: 40px auto;
   padding: 20px;
@@ -18,7 +19,7 @@ body {
   border: none;
   font-size: 18px;
   border-radius: 5px;
-  background: #f7f7f7;
+  background: #e3f0fd;
 }
 .search-input:focus {
   outline: 2px solid #5585b5;
@@ -50,6 +51,7 @@ p strong {
   font-size: 16px;
   line-height: 30px;
 }
+
 .description,
 .country {
   font-style: italic;
@@ -63,6 +65,9 @@ p strong {
 
 .feature-emoji {
   font-size: 24px;
+  border-radius: 12px;
+  border: 1px solid #e2eefa;
+  margin-right: 10px;
 }
 .feature-temperature {
   font-size: 60px;
