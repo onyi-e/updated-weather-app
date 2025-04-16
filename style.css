@@ -80,16 +80,17 @@ p strong {
 .forecast {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px;
 }
 .forecast-day {
+  align-items: center;
   border: 1px solid #e3f0fd;
   padding: 35px;
   border-radius: 10px;
   box-shadow: 2px 2px 2cap rgba(118, 163, 207, 0.2);
 }
 .weather-forecast-day {
+  margin-left: 10px;
   color: #113f67;
   margin-bottom: 20px;
 }

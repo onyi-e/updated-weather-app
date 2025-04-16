@@ -57,3 +57,23 @@ function userInputCity(event) {
 let userCity = document.querySelector("#form-input");
 userCity.addEventListener("submit", userInputCity);
 updateWeatherReading("Lagos");
+
+function updateForecastHtml() {
+  let forecastHtml = "";
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thur"];
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast-day">
+  <div class="weather-forecast-day">${day}</div>
+  <div class="forecast-icon">⛅</div>
+  <div class="forecast-temp">
+  <strong>18°</strong>
+  <span class="lowest-temp-forecast">12</span>
+  </div>
+  </div>`;
+    let forecastElement = document.querySelector("#forecast");
+    forecastElement.innerHTML = forecastHtml;
+  });
+}
+updateForecastHtml();
