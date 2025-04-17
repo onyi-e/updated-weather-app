@@ -81,11 +81,12 @@ p strong {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+  align-items: center;
 }
 .forecast-day {
-  align-items: center;
+  text-align: center;
   border: 1px solid #e3f0fd;
-  padding: 35px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px 2cap rgba(118, 163, 207, 0.2);
 }
@@ -96,7 +97,7 @@ p strong {
 }
 .forecast-icon {
   margin-bottom: 20px;
-  font-size: 40px;
+  width: 70px;
 }
 .forecast-temp strong {
   color: #f73859;
