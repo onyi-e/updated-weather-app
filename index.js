@@ -87,10 +87,9 @@ function updateForecastHtml(response) {
   </div>
   </div>`;
     }
-
-    let forecastElement = document.querySelector("#forecast");
-    forecastElement.innerHTML = forecastHtml;
   });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let userCity = document.querySelector("#form-input");
