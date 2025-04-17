@@ -19,8 +19,10 @@ function userCityWeatherUpdate(response) {
   windSpeed.innerHTML = `${windReading}km/hr `;
   let icon = document.querySelector("#icon");
   icon.innerHTML = `<img src="${response.data.condition.icon_url}" />`;
-  getForecast();
+
+  getForecast(response.data.city);
 }
+
 function convertDate(date) {
   let hour = date.getHours();
   let minute = date.getMinutes();
@@ -55,10 +57,6 @@ function userInputCity(event) {
   updateWeatherReading(userCityinput.value);
 }
 
-let userCity = document.querySelector("#form-input");
-userCity.addEventListener("submit", userInputCity);
-updateWeatherReading("Lagos");
-
 function convertForecastDate(timestamp) {
   let date = new Date(timestamp * 1000);
   let days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
@@ -66,19 +64,20 @@ function convertForecastDate(timestamp) {
 }
 
 function getForecast(city) {
-  let apiUrl =
-    "https://api.shecodes.io/weather/v1/forecast?query=${city}&key=3aco6795a94b0838a7e43f73ad5b4e0t";
-  axios.get(apiUrl).then(updateForecastHtml);
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=3aco6795a94b0838a7e43f73ad5b4e0t&units=metric`;
+  axios(apiUrl).then(updateForecastHtml);
 }
 
 function updateForecastHtml(response) {
   let forecastHtml = "";
+
   response.data.daily.forEach(function (day, index) {
     if (index < 5) {
       forecastHtml =
         forecastHtml +
         `<div class="forecast-day">
   <div class="weather-forecast-day">${convertForecastDate(day.time)}</div>
+  
   <img src="${day.condition.icon_url}" class="forecast-icon"/>
   <div class="forecast-temp">
   <strong>${Math.round(day.temperature.maximum)}°</strong>
@@ -88,8 +87,13 @@ function updateForecastHtml(response) {
   </div>
   </div>`;
     }
+
     let forecastElement = document.querySelector("#forecast");
     forecastElement.innerHTML = forecastHtml;
   });
 }
-updateForecastHtml();
+
+let userCity = document.querySelector("#form-input");
+userCity.addEventListener("submit", userInputCity);
+
+updateWeatherReading("Lagos");
